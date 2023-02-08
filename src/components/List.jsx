@@ -3,8 +3,9 @@ import {Button} from '../style/component.style'
 import CreateElement from './CreateElement'
 import EditElement from './EditElement';
 import Item from './Item';
+import Example from './newcomponent';
 
-function List() {
+function List({isOpen, setIsOpen}) {
   const [create, setCreate] = useState(false);
   const [allNotes, setNotes] = useState([]);
   const [edit, setEdit] = useState(false);
@@ -16,16 +17,16 @@ function List() {
 
   return (
     <>
-      <div className="list">
+      <ul className="list">
       {
       allNotes != null &&
 
         allNotes.map((item) =>
-          <Item item={item} setEdit={setEdit} setNoteEdit={setNoteEdit}/>
+          <Item isOpen={isOpen} setIsOpen={setIsOpen} item={item} setEdit={setEdit} setNoteEdit={setNoteEdit}/>
         )
           
       }
-      </div>
+      </ul>
 
       <div className="buttons">
       {
@@ -40,6 +41,7 @@ function List() {
       edit === true &&
         <EditElement allNotes={allNotes} setNotes={setNotes} setEdit={setEdit} noteEdit={noteEdit}/>
       }
+      <Example isOpen={isOpen} setIsOpen={setIsOpen} allNotes={allNotes} setNotes={setNotes} setEdit={setEdit} noteEdit={noteEdit}/>
     </>
 
   )

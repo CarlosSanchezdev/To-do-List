@@ -1,18 +1,27 @@
 import React from 'react'
 
-function Item({item, setEdit, setNoteEdit}) {
+function Item({item, setEdit, setNoteEdit,isOpen,setIsOpen}) {
   const edit = (note) =>{
     setNoteEdit(note)
     setEdit(true)
+    setIsOpen(true)
 
     console.info(note)
 
   }
   return (
-    <div key={item.id} className="note">
-    <p className="title" onClick={() => edit(item)} style={{cursor:"pointer"}}>{item.title}</p>
-    <p className="description">{item.description}</p>
-    </div>
+    <li key={item.id} className="note">
+        <div>
+          <input id="default-checkbox" type="checkbox" value="" />
+        </div>
+        <div>
+          <p className="title" onClick={() => edit(item)} style={{cursor:"pointer"}}>{item.title}</p>
+          <p className="description">{item.description}</p>
+        </div>
+        
+      
+    
+    </li>
     
   )
 }
