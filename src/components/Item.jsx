@@ -1,14 +1,12 @@
 import React from 'react'
 
-function Item({item, setEdit, setNoteEdit,isOpen,setIsOpen}) {
+function Item({item, setNoteEdit, setIsOpen}) {
   const edit = (note) =>{
     setNoteEdit(note)
-    setEdit(true)
     setIsOpen(true)
 
-    console.info(note)
-
   }
+  
   return (
     <li key={item.id} className="note">
         <div>

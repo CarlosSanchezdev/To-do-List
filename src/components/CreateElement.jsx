@@ -1,6 +1,5 @@
 import React from 'react'
 import {Button} from '../style/component.style'
-//import {useState} from 'react'
 import { useForm } from "react-hook-form";
 import {v4 as uuidv4} from 'uuid'
 
@@ -21,8 +20,8 @@ function CreateElement({allNotes, setNotes, setCreate}) {
   
 
   return (
-    <div className="form">
-      <form onSubmit={handleSubmit(onSubmit)} >
+    <div className="w-5/6 rounded overflow-hidden shadow-lg h-40 pt-5 pr-5 pb-5 pl-5  md:w-3/5 lg:w-2/5  ">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-between h-full" >
         
         <div className="formInputs">
           
@@ -38,9 +37,9 @@ function CreateElement({allNotes, setNotes, setCreate}) {
 
         </div>
 
-        <div className="formButtons">
-          <Button onClick={() => setCreate(false)}>Cancelar</Button>
-          <Button primary>Añadir</Button>
+        <div className="flex flex-row-reverse space-x-4 space-x-reverse">
+          <button className="bg-transparent hover:bg-cyan-600 text-cyan-600 font-semibold hover:text-white py-2 px-4 border border-cyan-600 hover:border-transparent rounded">Añadir</button>
+          <button onClick={() => setCreate(false)} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Cancelar</button>
         </div>
 
       </form>
