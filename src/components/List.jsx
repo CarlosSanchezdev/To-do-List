@@ -5,7 +5,7 @@ import Edit from './Edit'
 
 function List({create, setCreate}) {
   
-  const [allNotes, setNotes] = useState([]);
+  const [allNotes, setNotes] = useState(JSON.parse(localStorage.getItem('Notes')) || []);
   const [noteEdit, setNoteEdit] = useState("");
   const [isOpen, setIsOpen] = useState(false)
  

@@ -27,7 +27,7 @@ function Edit({isOpen, setIsOpen, noteEdit, allNotes, setNotes}) {
     const newArrayNotes = allNotes.filter((item) => item.id !== noteEdit.id)
 
     setNotes(newArrayNotes)
-
+    localStorage.setItem('Notes', JSON.stringify(newArrayNotes))
     console.info(newArrayNotes)
     
   }

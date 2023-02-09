@@ -1,5 +1,4 @@
 import React from 'react'
-import {Button} from '../style/component.style'
 import { useForm } from "react-hook-form";
 import {v4 as uuidv4} from 'uuid'
 
@@ -14,6 +13,8 @@ function CreateElement({allNotes, setNotes, setCreate}) {
   const onSubmit = (data, e) => {
     data.id = uuidv4()
     setNotes([...allNotes, data]);
+    const toLocalStorage = [...allNotes, data]
+    localStorage.setItem('Notes', JSON.stringify(toLocalStorage))
     e.target.reset()
   };
 
