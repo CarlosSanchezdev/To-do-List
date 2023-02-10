@@ -41,6 +41,11 @@ function CreateElement({allNotes, setNotes, setCreate}) {
         <div className="flex flex-row-reverse space-x-4 space-x-reverse">
           <button className="bg-transparent hover:bg-cyan-600 text-cyan-600 font-semibold hover:text-white py-2 px-4 border border-cyan-600 hover:border-transparent rounded">Añadir</button>
           <button onClick={() => setCreate(false)} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Cancelar</button>
+          <select {...register("project")}>
+            <option value="project 1">project 1</option>
+            <option value="project 2">project 2</option>
+            <option value="new project">new project +</option>
+          </select>
         </div>
 
       </form>

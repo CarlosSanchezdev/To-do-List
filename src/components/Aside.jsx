@@ -16,6 +16,30 @@ function Aside({setCreate}) {
 
       <div class="sidebar-content px-4 py-6">
         <ul class="flex flex-col w-full">
+
+        <li class="my-px" onClick={() => setCreate(true)}>
+            <a
+              href="#"
+              class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
+            >
+              <span class="flex items-center justify-center text-lg text-cyan-300">
+                <svg
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="h-6 w-6"
+                >
+                  <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span class="ml-3">Add new</span>
+            </a>
+          </li>
+
+
           <li class="my-px">
             <a
               href="#"
@@ -36,12 +60,14 @@ function Aside({setCreate}) {
                   />
                 </svg>
               </span>
-              <span class="ml-3">Dashboard</span>
+              <span class="ml-3">Tasks</span>
             </a>
           </li>
+          
           <li class="my-px">
             <span class="flex font-medium text-sm text-gray-300 px-4 my-4 uppercase">Projects</span>
           </li>
+          
 
           <li class="my-px">
             <a
@@ -63,7 +89,7 @@ function Aside({setCreate}) {
                   />
                 </svg>
               </span>
-              <span class="ml-3">Manager</span>
+              <span class="ml-3">Project 1</span>
             </a>
           </li>
 
@@ -87,7 +113,7 @@ function Aside({setCreate}) {
                   />
                 </svg>
               </span>
-              <span class="ml-3">Tasks</span>
+              <span class="ml-3">Project 2</span>
             </a>
           </li>
 
@@ -118,27 +144,7 @@ function Aside({setCreate}) {
             </a>
           </li>
 
-          <li class="my-px" onClick={() => setCreate(true)}>
-            <a
-              href="#"
-              class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
-            >
-              <span class="flex items-center justify-center text-lg text-cyan-300">
-                <svg
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  class="h-6 w-6"
-                >
-                  <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </span>
-              <span class="ml-3">Add new</span>
-            </a>
-          </li>
+          
 
           <li class="my-px">
             <span class="flex font-medium text-sm text-gray-300 px-4 my-4 uppercase">Account</span>
